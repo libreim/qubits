@@ -84,11 +84,11 @@
   \normalfont \normalsize 
   \textsc{Universidad de Granada.} \\ [25pt] % Your university, school and/or department name(s)
   \horrule{0.5pt} \\[0.4cm] % Thin top horizontal rule
-  \huge Título \\ % The assignment title
+  \huge Qubits \\ % The assignment title
   \horrule{2pt} \\[0.5cm] % Thick bottom horizontal rule
 }
 
-\author{Autor} % Your name
+\author{Ignacio Cordón y Mario Román} % Your name
 
 \date{\normalsize\today} % Today's date or a custom date
 
@@ -102,5 +102,18 @@
 \begin{document}
 \maketitle % Escribe el título
 
+\section {El producto tensor}
+  \subsection {Funciones multilineales}
+  En un espacio vectorial, una \textbf{función lineal} es aquella que respeta sumas y productos por escalares.
+  Es decir, respeta la estructura de espacio vectorial:
+  $$ f(v+w) = f(v) + f(w) $$
+  $$ f(\lambda v) = \lambda f(v) $$
+
+  Al intentar generalizar este concepto a una función en varias variables, podríamos llegar a las funciones 
+  lineales sobre el espacio producto. Por ejemplo, una $f$ lineal sobre el espacio $V \times W$ cumple:
+  $$ f(v+v',w+w') = f(v,w) + f(v',w')$$
+  $$ f(\lambda v, \lambda w) = \lambda f(v,w) $$
+  Pero esta estructura no es "lineal sobre cada variable". Funciones como el producto de matrices tienen otra
+  estructura.
 
 \end{document}
