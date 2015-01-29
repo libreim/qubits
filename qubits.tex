@@ -71,6 +71,12 @@
 \numberwithin{figure}{section} % Number figures within sections (i.e. 1.1, 1.2, 2.1, 2.2 instead of 1, 2, 3, 4)
 \numberwithin{table}{section} % Number tables within sections (i.e. 1.1, 1.2, 2.1, 2.2 instead of 1, 2, 3, 4)
 
+% Diagramas conmutativos
+\usepackage{tikz}
+\usetikzlibrary{matrix,arrows}
+\tikzset{every loop/.style={min distance=10mm,in=0,out=60,looseness=10}}
+\usepackage{tikz-cd}
+\usetikzlibrary{cd}
 
 
 %----------------------------------------------------------------------------------------
@@ -102,18 +108,44 @@
 \begin{document}
 \maketitle % Escribe el título
 
-\section {El producto tensor}
+\section {El producto tensorial}
   \subsection {Funciones multilineales}
-  En un espacio vectorial, una \textbf{función lineal} es aquella que respeta sumas y productos por escalares.
-  Es decir, respeta la estructura de espacio vectorial:
-  $$ f(v+w) = f(v) + f(w) $$
-  $$ f(\lambda v) = \lambda f(v) $$
+    En un espacio vectorial, una \textbf{función lineal} es aquella que respeta sumas y productos por escalares.
+    Es decir, respeta la estructura de espacio vectorial:
+    $$ f(v+w) = f(v) + f(w) $$
+    $$ f(\lambda v) = \lambda f(v) $$
 
-  Al intentar generalizar este concepto a una función en varias variables, podríamos llegar a las funciones 
-  lineales sobre el espacio producto. Por ejemplo, una $f$ lineal sobre el espacio $V \times W$ cumple:
-  $$ f(v+v',w+w') = f(v,w) + f(v',w')$$
-  $$ f(\lambda v, \lambda w) = \lambda f(v,w) $$
-  Pero esta estructura no es "lineal sobre cada variable". Funciones como el producto de matrices tienen otra
-  estructura.
+    Al intentar generalizar este concepto a una función en varias variables, podríamos llegar a las funciones 
+    lineales sobre el espacio producto. Por ejemplo, una $f$ lineal sobre el espacio $V \times W$ cumple:
+    $$ f(v+v',w+w') = f(v,w) + f(v',w')$$
+    $$ f(\lambda v, \lambda w) = \lambda f(v,w) $$
+    Pero esta estructura no es "lineal sobre cada variable". Funciones como el producto tienen otra
+    estructura:
+    $$ (A+B)(C+D) = AC+AD+BC+BD \neq AC+BD $$
+    
+    La otra forma de generalizar las funciones lineales son las funciones \textbf{multilineales}, que serán lineales
+    en cada una de las variables por separado y cuando lo demás queda fijo. Cumplen:
+    $$ f(v+v',w) = f(v,w) + f(v',w) $$
+    $$ f(v,w+w') = f(v,w) + f(v,w') $$
+    $$ f(\lambda v,w) = \lambda f(v,w) = f(v,\lambda w) $$
 
+  \subsection{Estructura del espacio producto tensorial}
+    El espacio producto tensor de dos espacios vectoriales se notará por $V \otimes W$. Sus vectores serán de
+    la forma $v \otimes w$, donde $v \in V$, $w \in W$ y donde $\otimes$ se comportará como una función multilineal.
+    Es decir:
+    $$ v \otimes w + v' \otimes w  = (v+v') \otimes w $$
+    $$ v \otimes w + v \otimes w'  = v \otimes (w+w') $$
+    $$ (\lambda v) \otimes w = w \otimes (\lambda v)  $$
+    El espacio $V \otimes W$ tendrá como base todos los posibles productos tensoriales entre un vector de $V$ y otro
+    de $W$. Esto hará que su dimensión sea el producto de las dimensiones:
+    $$ dim(V \otimes W) = dim(V)dim(W) $$
+    
+    Por ejemplo, $\mathbb{R}^2\otimes\mathbb{R}^2$ tiene dimensión cuatro y base:
+    $$ e_1\otimes e_1,\quad e_1\otimes e_2,\quad  e_2 \otimes e_1,\quad  e_2 \otimes e_2 $$
+    Nótese aquí que no todos los elementos del espacio van a poder escribirse como un producto tensorial
+    de vectores de los factores, por ejemplo $e_1 \otimes e_1 + e_2 \otimes e_2$ no puede escribirse de forma
+    más reducida. %% ¿¿POR QUÉ?? -> a^2 + b^2 no puede expresarse como producto de sumas de a y b
+    
+
+    
 \end{document}
