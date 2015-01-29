@@ -146,6 +146,16 @@
     de vectores de los factores, por ejemplo $e_1 \otimes e_1 + e_2 \otimes e_2$ no puede escribirse de forma
     más reducida. %% ¿¿POR QUÉ?? -> a^2 + b^2 no puede expresarse como producto de sumas de a y b
     
-
+  \subsection{Propiedad universal del producto tensorial}
+    El producto tensorial cumple el siguiente diagrama conmutativo.
+    \begin{center}
+       \begin{tikzcd}
+         {V \otimes W} \arrow{r}{\exists! \tilde f} & Z \\
+	 {V \times W} \arrow{u}{\otimes} \arrow{ur}[swap]{f}
+       \end{tikzcd}
+      \end{center}
+    En el que para cualquier función multilineal $f$, existe una única función
+    lineal $\tilde f$ que lo hace conmutativo. Es decir, toda función multilineal es la proyección 
+    al espacio producto tensorial seguida de una función lineal.
     
 \end{document}
