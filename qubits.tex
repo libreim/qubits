@@ -132,6 +132,10 @@
     $$ f(v,w+w') = f(v,w) + f(v,w') $$
     $$ f(\lambda v,w) = \lambda f(v,w) = f(v,\lambda w) $$
 
+    Es decir, una función de dos argumentos es bilineal si y sólo si sus dos aplicaciones parciales sobre
+    cualesquiera argumentos son lineales:
+    $$ f\quad \mbox{bilineal} \Leftrightarrow f(x,\_), f(\_,y)\quad \mbox{lineales} $$
+    
   \subsection{Estructura del espacio producto tensorial}
     El espacio producto tensor de dos espacios vectoriales se notará por $V \otimes W$. Sus vectores serán de
     la forma $v \otimes w$, donde $v \in V$, $w \in W$ y donde $\otimes$ se comportará como una función multilineal.
@@ -161,6 +165,8 @@
     lineal $\tilde f$ que lo hace conmutativo. Es decir, toda función multilineal es la proyección 
     al espacio producto tensorial seguida de una función lineal.
     
+  \subsection{Producto de Kronecker}
+    
     
   %% Bibliography
   \vfill
@@ -172,5 +178,10 @@
     \url{http://jeremykun.com/main-content/} \\
     Estos apuntes están basados en varios artículos del blog, siendo 
     varias partes una traducción y resumen de los mismos.
+    
+  \bibitem{algebra0}
+    Paolo Aluffi,
+    \emph{Algebra, Chapter 0}. \\
+    
   \end{thebibliography}
 \end{document}
