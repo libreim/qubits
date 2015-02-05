@@ -110,7 +110,7 @@
 
 \begin{document}
 \maketitle % Escribe el título
-
+equation
 \section {El producto tensorial}
   \subsection {Funciones multilineales}
     En un espacio vectorial, una \textbf{función lineal} es aquella que respeta sumas y productos por escalares.
@@ -119,7 +119,7 @@
     $$ f(\lambda v) = \lambda f(v) $$
 
     Al intentar generalizar este concepto a una función en varias variables, podríamos llegar a las funciones 
-    lineales sobre el espacio producto. Por ejemplo, una $f$ lineal sobre el espacio $V \times W$ cumple:
+    lineales sobre el espacio producto. Por eequationjemplo, una $f$ lineal sobre el espacio $V \times W$ cumple:
     $$ f(v+v',w+w') = f(v,w) + f(v',w')$$
     $$ f(\lambda v, \lambda w) = \lambda f(v,w) $$
     Pero esta estructura no es "lineal sobre cada variable". Funciones como el producto tienen otra
@@ -166,7 +166,30 @@
     al espacio producto tensorial seguida de una función lineal.
     
   \subsection{Producto de Kronecker}
-    
+    Un caso particular del producto tensorial sobre las matrices es el producto de Kronecker.
+    Para dos matrices $A$ y $B$, de dimensiones $m \times n$ y $p \times q$, obtenemos una matriz
+    bloque $mp \times nq$ de la forma:
+    \begin{multline*}
+      A \otimes B = \left(a_{\lceil i/p \rceil, \lceil j/q \rceil} b_{i\%p,j\%q} \right)_{i,j}
+	= \begin{bmatrix} 
+	    a_{11}B & a_{12}B & \dots  & a_{1n}B \\
+	    a_{21}B & a_{22}B & \dots  & a_{2n}B \\
+	    \vdots  & \vdots  & \ddots & \vdots  \\
+	    a_{m1}B & a_{m2}B & \dots  & a_{mn}B \\
+	  \end{bmatrix}
+	= \\ \begin{bmatrix} 
+	    a_{11}b_{11} & \dots & a_{11}b_{1q} & a_{12}b_{11} & \dots & a_{12}b_{1q} & \dots  & a_{1n}b_{11} & \dots & a_{1n}b_{1q} \\
+	    \vdots & \ddots & \vdots& \vdots & \ddots & \vdots & \ddots  & \vdots & \dots & \vdots \\
+	    a_{11}b_{p1} & \dots & a_{11}b_{pq} & a_{12}b_{p1} & \dots & a_{12}b_{pq} & \dots  & a_{1n}b_{p1} & \dots & a_{1n}b_{pq} \\
+	    a_{21}b_{11} & \dots & a_{21}b_{1q} & a_{22}b_{11} & \dots & a_{22}b_{1q} & \dots  & a_{2n}b_{11} & \dots & a_{2n}b_{1q} \\
+	    \vdots & \ddots & \vdots& \vdots & \ddots & \vdots & \ddots  & \vdots & \dots & \vdots \\
+	    a_{21}b_{p1} & \dots & a_{21}b_{pq} & a_{22}b_{p1} & \dots & a_{22}b_{pq} & \dots  & a_{2n}b_{p1} & \dots & a_{2n}b_{pq} \\ 
+	    \vdots & \ddots & \vdots& \vdots & \ddots & \vdots & \ddots  & \vdots & \dots & \vdots \\    
+	    a_{m1}b_{11} & \dots & a_{m1}b_{1q} & a_{m2}b_{11} & \dots & a_{m2}b_{1q} & \dots  & a_{mn}b_{11} & \dots & a_{mn}b_{1q} \\
+	    \vdots & \ddots & \vdots& \vdots & \ddots & \vdots & \ddots  & \vdots & \dots & \vdots \\
+	    a_{m1}b_{p1} & \dots & a_{m1}b_{pq} & a_{m2}b_{p1} & \dots & a_{m2}b_{pq} & \dots  & a_{mn}b_{p1} & \dots & a_{mn}b_{pq} \\	    
+	    \end{bmatrix}
+    \end{multline*}
     
   %% Bibliography
   \vfill
