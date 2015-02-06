@@ -110,7 +110,7 @@
 
 \begin{document}
 \maketitle % Escribe el título
-equation
+
 \section {El producto tensorial}
   \subsection {Funciones multilineales}
     En un espacio vectorial, una \textbf{función lineal} es aquella que respeta sumas y productos por escalares.
@@ -190,6 +190,11 @@ equation
 	    a_{m1}b_{p1} & \dots & a_{m1}b_{pq} & a_{m2}b_{p1} & \dots & a_{m2}b_{pq} & \dots  & a_{mn}b_{p1} & \dots & a_{mn}b_{pq} \\	    
 	    \end{bmatrix}
     \end{multline*}
+    
+    Desde el producto de Kronecker se define la suma de Kronecker:
+    $$ A \oplus B = (A \otimes I_m) \oplus (I_n \otimes B) $$
+    Que la exponencial transforma en producto de Kronecker:
+    $$ exp(A \oplus B) = exp(A) \otimes exp(B) $$
     
   %% Bibliography
   \vfill
